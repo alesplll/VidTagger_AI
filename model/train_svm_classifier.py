@@ -17,7 +17,7 @@ def main():
 
     # Инициализируем DataModule с уменьшенной выборкой
     data_module = VideoDataModule(
-        video_meta_file, categories_file, tensor_dir, batch_size=32, sample_size=400)
+        video_meta_file, categories_file, tensor_dir, batch_size=32, sample_size=200)
 
     # Вызовем setup для инициализации dataset
     data_module.setup(stage='fit')
@@ -44,6 +44,7 @@ def main():
     trainer.test(model, datamodule=data_module)
 
     # Пример использования модели для предсказания меток для заданного video_id
+
     # video_id = "cf3ef0b2d6227ad372a9b7dcb6cb2df3"  # Замените на реальный video_id
     # predicted_tags = model.predict_for_video(video_id, tensor_dir)
     # if predicted_tags is not None:
