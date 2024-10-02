@@ -5,6 +5,8 @@ from classificators.svm_classifier.Classificator import MultiTaskLinearSVC
 from classificators.svm_classifier.DataModule import VideoDataModule
 import wandb
 
+# Do i need to use wandb?
+
 
 def main():
     # Инициализация wandb
